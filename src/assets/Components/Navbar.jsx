@@ -11,6 +11,7 @@ import {
   List,
   Button,
   Drawer,
+  Hidden,
 } from "@mui/material";
 
 /* ICONS & IMAGES */
@@ -73,7 +74,7 @@ function Navbar() {
           }}
         >
           <ListItem sx={{ flex: 1 }}>
-            <Button component="a" href="#home" color="inherit">
+            <Button component="a" href="#" color="inherit">
               <ListItemText primary="INICIO" />
             </Button>
           </ListItem>
@@ -93,29 +94,36 @@ function Navbar() {
             </Button>
           </ListItem>
         </List>
-        {deployMenu ? (
-          <Button onClick={handleClickDeploy}>
-            <MenuOpenIcon
-              fontSize="large"
-              color="secondary"
-              sx={{ display: { xs: "block", sm: "none" } }}
-            />
-          </Button>
-        ) : (
-          <Button onClick={handleClickDeploy}>
-            <MenuIcon
-              fontSize="large"
-              color="secondary"
-              sx={{ display: { xs: "block", sm: "none" } }}
-            />
-          </Button>
-        )}
-        <Drawer anchor="bottom" open={deployMenu} onClose={handleDrawerClose} sx={{display: {xs: "block", sm: "none"}}}>
+        <Hidden smUp>
+          {deployMenu ? (
+            <Button onClick={handleClickDeploy}>
+              <MenuOpenIcon
+                fontSize="large"
+                color="secondary"
+                sx={{ display: { xs: "block", sm: "none" } }}
+              />
+            </Button>
+          ) : (
+            <Button onClick={handleClickDeploy}>
+              <MenuIcon
+                fontSize="large"
+                color="secondary"
+                sx={{ display: { xs: "block", sm: "none" } }}
+              />
+            </Button>
+          )}
+        </Hidden>
+        <Drawer
+          anchor="bottom"
+          open={deployMenu}
+          onClose={handleDrawerClose}
+          sx={{ display: { xs: "block", sm: "none" } }}
+        >
           <List>
             <ListItem>
               <Button
                 component="a"
-                href="#home"
+                href="#"
                 color="inherit"
                 onClick={handleDrawerClose}
               >

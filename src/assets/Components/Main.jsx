@@ -27,7 +27,7 @@ export default function Main() {
       height="calc(100vh - 75px)"
       justifyContent="center"
       alignItems="center"
-      sx={{ marginX: { sx: 5, sm: 11 } }}
+      sx={{ marginX: { xs: 10, sm: 5, md: 25, lg: 35 } }}
     >
       <Box
         flex={1}
@@ -35,7 +35,7 @@ export default function Main() {
         sx={{
           paddingTop: { xs: "15px" },
           width: {
-            xs: 250,
+            xs: 225,
             sm: 300,
             md: 100,
           },
@@ -55,14 +55,16 @@ export default function Main() {
         sx={{ textAlign: "center", paddingX: { xs: 2, sm: 2 } }}
       >
         <Typography
-          sx={{ textDecoration: "underline", fontSize: { xs: 25, sm: 30 } }}
+          sx={{ fontWeight:800, fontSize: { xs: 20, sm: 25, md: 30 } }}
         >
           HOLA, SOY ANDRES RIVERA VALLE
         </Typography>
-        <Typography sx={{ fontSize: { xs: 20, sm: 25 } }}>
+        <Typography sx={{ fontSize: { xs: 15, sm: 20, md: 25 } }}>
           Ingeniero en Software
         </Typography>
-        <Typography>Front-ed & video game developer</Typography>
+        <Typography sx={{ fontSize: { xs: 15, sm: 20, md: 25 } }}>
+          Front-ed & video game developer
+        </Typography>
         <Box sx={{ marginTop: 3 }}>
           <Box
             borderRadius={7}
