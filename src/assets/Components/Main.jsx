@@ -10,6 +10,16 @@ import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import { theme } from "../../theme";
 
 export default function Main() {
+  const handleEmailClick = () => {
+    window.location.href = "mailto:carlosandresriveravalle@gmail.com";
+  };
+  const handleWhatsAppClick = () => {
+    const message = encodeURIComponent("Hola, ¿cómo te puede ayudar?");
+    const phoneNumber = "0984579517";
+
+    window.location.href = `https://wa.me/${phoneNumber}?text=${message}`;
+  };
+
   return (
     <Box
       display="flex"
@@ -44,11 +54,15 @@ export default function Main() {
         justifyContent="center"
         sx={{ textAlign: "center", paddingX: { xs: 2, sm: 2 } }}
       >
-        <Typography sx={{ textDecoration: "underline", fontSize: {xs: 25, sm: 30}}}>
+        <Typography
+          sx={{ textDecoration: "underline", fontSize: { xs: 25, sm: 30 } }}
+        >
           HOLA, SOY ANDRES RIVERA VALLE
         </Typography>
-        <Typography sx={{ fontSize: {xs: 20, sm: 25}}}>Ingeniero en Software</Typography>
-        <Typography >Front-ed & video game developer</Typography>
+        <Typography sx={{ fontSize: { xs: 20, sm: 25 } }}>
+          Ingeniero en Software
+        </Typography>
+        <Typography>Front-ed & video game developer</Typography>
         <Box sx={{ marginTop: 3 }}>
           <Box
             borderRadius={7}
@@ -60,56 +74,47 @@ export default function Main() {
             }}
           >
             <Grid
-                container
-                justifyContent="center"
-                alignItems="center"
-                height="100%"
-              >
-                <Grid item xs={3} sm={3}>
-                  <Link
-                    href="https://github.com/andresRivera123"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <IconButton sx={{ color: "black" }}>
-                      <GitHubIcon fontSize="large" />
-                    </IconButton>
-                  </Link>
-                </Grid>
-                <Grid item xs={3} sm={3}>
-                  <Link
-                    href="https://github.com/andresRivera123"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <IconButton sx={{ color: "black" }}>
-                      <LinkedInIcon fontSize="large" />
-                    </IconButton>
-                  </Link>
-                </Grid>
-                <Grid item xs={3} sm={3}>
-                  <Link
-                    href="https://github.com/andresRivera123"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <IconButton sx={{ color: "black" }}>
-                      <WhatsAppIcon fontSize="large" />
-                    </IconButton>
-                  </Link>
-                </Grid>
-                <Grid item xs={3} sm={3}>
-                  <Link
-                    href="https://github.com/andresRivera123"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <IconButton sx={{ color: "black" }}>
-                      <MailOutlineIcon fontSize="large" />
-                    </IconButton>
-                  </Link>
-                </Grid>
+              container
+              justifyContent="center"
+              alignItems="center"
+              height="100%"
+            >
+              <Grid item xs={3} sm={3}>
+                <Link
+                  href="https://github.com/andresRivera123"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <IconButton sx={{ color: "black" }}>
+                    <GitHubIcon fontSize="large" />
+                  </IconButton>
+                </Link>
               </Grid>
+              <Grid item xs={3} sm={3}>
+                <Link
+                  href="https://github.com/andresRivera123"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <IconButton sx={{ color: "black" }}>
+                    <LinkedInIcon fontSize="large" />
+                  </IconButton>
+                </Link>
+              </Grid>
+              <Grid item xs={3} sm={3}>
+                <IconButton
+                  onClick={handleWhatsAppClick}
+                  sx={{ color: "black" }}
+                >
+                  <WhatsAppIcon fontSize="large" />
+                </IconButton>
+              </Grid>
+              <Grid item xs={3} sm={3}>
+                <IconButton onClick={handleEmailClick} sx={{ color: "black" }}>
+                  <MailOutlineIcon fontSize="large" />
+                </IconButton>
+              </Grid>
+            </Grid>
           </Box>
         </Box>
       </Box>
