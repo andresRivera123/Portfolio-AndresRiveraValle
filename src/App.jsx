@@ -1,11 +1,12 @@
+import Navbar from "./assets/Components/Navbar";
+import { Box } from "@mui/material";
+
 function App() {
   return (
-    <>
-      <div>
-        Hola
-      </div>
-    </>
-  )
+    <Box>
+      <Navbar/>
+    </Box>    
+  );
 }
 
-export default App
+export default App;
