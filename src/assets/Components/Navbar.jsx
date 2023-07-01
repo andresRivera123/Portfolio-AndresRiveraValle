@@ -21,7 +21,8 @@ import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 
 const StyleToolbar = styled(Toolbar)({
   display: "flex",
-  justifyContent: "space-evenly",
+  justifyContent: "space-around",
+  alignItems: "center",
   height: "75px",
 });
 
@@ -34,8 +35,6 @@ const UserBox = styled(Box)(({ theme }) => ({
   },
 }));
 
-const pages = ["Inicio", "Sobre mí", "Proyectos", "Logros"];
-
 function Navbar() {
   const [deployMenu, setDeployMenu] = React.useState(false);
 
@@ -47,8 +46,16 @@ function Navbar() {
     setDeployMenu((prevDeployMenu) => !prevDeployMenu);
   };
 
+  const handleLinkClick = (event, sectionId) => {
+    event.preventDefault();
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <AppBar position="sticky">
+    <AppBar position="fixed">
       <StyleToolbar>
         <Box>
           <Box
@@ -74,22 +81,62 @@ function Navbar() {
           }}
         >
           <ListItem sx={{ flex: 1 }}>
-            <Button component="a" href="#" color="inherit">
+            <Button
+              onClick={(e) => handleLinkClick(e, "home")}
+              component="a"
+              href="#home"
+              color="inherit"
+              sx={{
+                "&:hover": {
+                  backgroundColor: "#D79788",
+                },
+              }}
+            >
               <ListItemText primary="INICIO" />
             </Button>
           </ListItem>
           <ListItem sx={{ flex: 2 }}>
-            <Button component="a" href="#about" color="inherit">
+            <Button
+              onClick={(e) => handleLinkClick(e, "about")}
+              component="a"
+              href="#about"
+              color="inherit"
+              sx={{
+                "&:hover": {
+                  backgroundColor: "#D79788",
+                },
+              }}
+            >
               <ListItemText primary="SOBRE MÍ" />
             </Button>
           </ListItem>
           <ListItem sx={{ flex: 1 }}>
-            <Button component="a" href="#projects" color="inherit">
+            <Button
+              onClick={(e) => handleLinkClick(e, "projects")}
+              component="a"
+              href="#projects"
+              color="inherit"
+              sx={{
+                "&:hover": {
+                  backgroundColor: "#D79788",
+                },
+              }}
+            >
               <ListItemText primary="PROYECTOS" />
             </Button>
           </ListItem>
           <ListItem sx={{ flex: 1 }}>
-            <Button component="a" href="#achievements" color="inherit">
+            <Button
+              onClick={(e) => handleLinkClick(e, "achievements")}
+              component="a"
+              href="#achievements"
+              color="inherit"
+              sx={{
+                "&:hover": {
+                  backgroundColor: "#D79788",
+                },
+              }}
+            >
               <ListItemText primary="LOGROS" />
             </Button>
           </ListItem>
@@ -123,11 +170,11 @@ function Navbar() {
             <ListItem>
               <Button
                 component="a"
-                href="#"
+                href="#home"
                 color="inherit"
                 onClick={handleDrawerClose}
               >
-                <ListItemText primary="INICIO" />
+                <ListItemText primary="INICIO" sx={{ textAlign: "center" }} />
               </Button>
             </ListItem>
             <ListItem>
@@ -137,7 +184,7 @@ function Navbar() {
                 color="inherit"
                 onClick={handleDrawerClose}
               >
-                <ListItemText primary="SOBRE MÍ" />
+                <ListItemText primary="SOBRE MÍ" sx={{ textAlign: "center" }} />
               </Button>
             </ListItem>
             <ListItem>
@@ -147,7 +194,10 @@ function Navbar() {
                 color="inherit"
                 onClick={handleDrawerClose}
               >
-                <ListItemText primary="PROYECTOS" />
+                <ListItemText
+                  primary="PROYECTOS"
+                  sx={{ textAlign: "center" }}
+                />
               </Button>
             </ListItem>
             <ListItem>
@@ -157,7 +207,7 @@ function Navbar() {
                 color="inherit"
                 onClick={handleDrawerClose}
               >
-                <ListItemText primary="LOGROS" />
+                <ListItemText primary="LOGROS" sx={{ textAlign: "center" }} />
               </Button>
             </ListItem>
           </List>

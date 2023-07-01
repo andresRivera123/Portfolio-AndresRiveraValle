@@ -28,6 +28,7 @@ export default function Main() {
       justifyContent="center"
       alignItems="center"
       sx={{ marginX: { xs: 10, sm: 5, md: 25, lg: 35 } }}
+      gap={5}
     >
       <Box
         flex={1}
@@ -55,7 +56,7 @@ export default function Main() {
         sx={{ textAlign: "center", paddingX: { xs: 2, sm: 2 } }}
       >
         <Typography
-          sx={{ fontWeight:800, fontSize: { xs: 20, sm: 25, md: 30 } }}
+          sx={{ fontWeight: 800, fontSize: { xs: 20, sm: 25, md: 30 } }}
         >
           HOLA, SOY ANDRES RIVERA VALLE
         </Typography>
@@ -70,7 +71,7 @@ export default function Main() {
             borderRadius={7}
             sx={{
               height: "60px",
-              width: { xs: "225px", sm: "250px" },
+              width: { xs: "250px", sm: "300px" },
               margin: "0 auto",
               bgcolor: theme.palette.primary.main,
             }}
@@ -87,7 +88,7 @@ export default function Main() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <IconButton sx={{ color: "black" }}>
+                  <IconButton sx={{ color: "black", "&:hover": { transform: "scale(1.2)" }, }}>
                     <GitHubIcon fontSize="large" />
                   </IconButton>
                 </Link>
@@ -98,7 +99,12 @@ export default function Main() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <IconButton sx={{ color: "black" }}>
+                  <IconButton
+                    sx={{
+                      color: "black",
+                      "&:hover": { transform: "scale(1.2)" },
+                    }}
+                  >
                     <LinkedInIcon fontSize="large" />
                   </IconButton>
                 </Link>
@@ -106,13 +112,13 @@ export default function Main() {
               <Grid item xs={3} sm={3}>
                 <IconButton
                   onClick={handleWhatsAppClick}
-                  sx={{ color: "black" }}
+                  sx={{ color: "black", "&:hover": { transform: "scale(1.2)" }, }}
                 >
                   <WhatsAppIcon fontSize="large" />
                 </IconButton>
               </Grid>
               <Grid item xs={3} sm={3}>
-                <IconButton onClick={handleEmailClick} sx={{ color: "black" }}>
+                <IconButton onClick={handleEmailClick} sx={{ color: "black", "&:hover": { transform: "scale(1.2)" }, }}>
                   <MailOutlineIcon fontSize="large" />
                 </IconButton>
               </Grid>
