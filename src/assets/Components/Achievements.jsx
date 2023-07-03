@@ -19,7 +19,7 @@ const Achievements = () => {
           marginTop: 3,
         }}
       >
-        <Typography variant="h4" sx={{ textAlign: "center" }}>
+      <Typography variant="h4" sx={{ textAlign: "center", fontWeight: 500 }}>
           Logros
         </Typography>
       </Box>

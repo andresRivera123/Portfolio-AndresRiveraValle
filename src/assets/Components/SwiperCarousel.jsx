@@ -3,29 +3,43 @@ import { Box } from "@mui/material";
 import logoImage from "../images/logo.png";
 import unityImage from "../images/unityImage.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
+import { Pagination } from "swiper/modules";
+
 
 import "swiper/css";
+import 'swiper/css/pagination';
+import '../Styles/bulletSwiper.css';
 
 const SwiperCarousel = () => {
+
   return (
     <Box>
       <Swiper
         modules={[Pagination]}
-      
-        pagination={{
-          el: ".pagination",
-          clickable: true,
-        }}
+        pagination={{clickable: true}}
         slidesPerView={3}
+
         breakpoints={{
-          "@0.00": { slidesPerView: 1, spaceBetween: 10 },
-          "@0.50": { slidesPerView: 1.5, spaceBetween: 25 },
-          "@0.75": { slidesPerView: 1.75, spaceBetween: 25 },
-          "@1.00": { slidesPerView: 2, spaceBetween: 10 },
-          "@1.25": { slidesPerView: 2.5, spaceBetween: 20 },
-          "@1.50": { slidesPerView: 3, spaceBetween: 10 },
-          "@1.75": { slidesPerView: 4, spaceBetween: 20 },
+          180: {
+            slidesPerView: 1,
+            spaceBetween: 15,
+          },
+          425: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+          },
+          750: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+          },
+          1050: {
+            slidesPerView: 4,
+            spaceBetween: 15,
+          },
+          1500: {
+            slidesPerView: 4,
+            spaceBetween: 15,
+          },
         }}
       >
         <SwiperSlide>
@@ -73,7 +87,6 @@ const SwiperCarousel = () => {
           </Box>
         </SwiperSlide>
       </Swiper>
-      <div className="pagination" />
     </Box>
   );
 };

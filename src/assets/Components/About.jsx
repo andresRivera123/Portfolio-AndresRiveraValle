@@ -4,7 +4,7 @@ import React from "react";
 export default function About() {
   return (
     <Box id="about" sx={{ marginX: { xs: 3, sm: 8 }, marginY: 3 }}>
-      <Typography variant="h4" sx={{ textAlign: "center" }}>
+      <Typography variant="h4" sx={{ textAlign: "center", fontWeight: 500 }}>
         Sobre mí
       </Typography>
       <Box
@@ -22,7 +22,7 @@ export default function About() {
         <span style={{ fontWeight: 800 }}>frontend</span> con mis habilidades en
         el <span style={{ fontWeight: 800 }}>desarrollo de videojuegos</span>.”
       </Box>
-      <Typography variant="h4" sx={{ textAlign: "center" }}>
+      <Typography variant="h4" sx={{ textAlign: "center", fontWeight: 500 }}>
         Habilidades
       </Typography>
     </Box>

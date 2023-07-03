@@ -19,18 +19,20 @@ export default function Projects() {
   };
   return (
     <Box sx={{ marginX: { xs: 3, sm: 8 }, marginY: 3 }}>
-      <Typography variant="h4" sx={{ textAlign: "center" }}>
+      <Typography variant="h4" sx={{ textAlign: "center", fontWeight: 500 }}>
         Proyectos
       </Typography>
       {/* UNITY */}
-      <Typography sx={{ fontWeight: 600 }}>UNITY</Typography>
-      <SwiperCarousel/>
+      <Typography variant="h5" sx={{ fontWeight: 500 }}>
+        Unity
+      </Typography>
+      <SwiperCarousel />
       {/* WEB */}
-      <Typography sx={{ fontWeight: 600 }}>WEB</Typography>
-      <SwiperCarousel/>
+      <Typography variant="h5" sx={{ fontWeight: 500 }}>Web</Typography>
+      <SwiperCarousel />
       {/* DESING */}
-      <Typography sx={{ fontWeight: 600 }}>DESING</Typography>
-      <SwiperCarousel/>
+      <Typography variant="h5" sx={{ fontWeight: 500 }}>Diseño</Typography>
+      <SwiperCarousel />
     </Box>
   );
 }
