@@ -26,14 +26,12 @@ const StyleToolbar = styled(Toolbar)({
   height: "75px",
 });
 
-const UserBox = styled(Box)(({ theme }) => ({
-  display: "none",
-  alignItems: "center",
-  gap: "5px",
-  [theme.breakpoints.up("sm")]: {
-    display: "flex",
-  },
-}));
+const menuOptions = [
+  { id: "home", label: "INICIO", flex: 1 },
+  { id: "about", label: "SOBRE MÍ", flex: 2 },
+  { id: "projects", label: "PROYECTOS", flex: 1 },
+  { id: "achievements", label: "LOGROS", flex: 1 },
+];
 
 function Navbar() {
   const [deployMenu, setDeployMenu] = React.useState(false);
@@ -80,66 +78,23 @@ function Navbar() {
             alignItems: "center",
           }}
         >
-          <ListItem sx={{ flex: 1 }}>
-            <Button
-              onClick={(e) => handleLinkClick(e, "home")}
-              component="a"
-              href="#home"
-              color="inherit"
-              sx={{
-                "&:hover": {
-                  backgroundColor: "#D79788",
-                },
-              }}
-            >
-              <ListItemText primary="INICIO" />
-            </Button>
-          </ListItem>
-          <ListItem sx={{ flex: 2 }}>
-            <Button
-              onClick={(e) => handleLinkClick(e, "about")}
-              component="a"
-              href="#about"
-              color="inherit"
-              sx={{
-                "&:hover": {
-                  backgroundColor: "#D79788",
-                },
-              }}
-            >
-              <ListItemText primary="SOBRE MÍ" />
-            </Button>
-          </ListItem>
-          <ListItem sx={{ flex: 1 }}>
-            <Button
-              onClick={(e) => handleLinkClick(e, "projects")}
-              component="a"
-              href="#projects"
-              color="inherit"
-              sx={{
-                "&:hover": {
-                  backgroundColor: "#D79788",
-                },
-              }}
-            >
-              <ListItemText primary="PROYECTOS" />
-            </Button>
-          </ListItem>
-          <ListItem sx={{ flex: 1 }}>
-            <Button
-              onClick={(e) => handleLinkClick(e, "achievements")}
-              component="a"
-              href="#achievements"
-              color="inherit"
-              sx={{
-                "&:hover": {
-                  backgroundColor: "#D79788",
-                },
-              }}
-            >
-              <ListItemText primary="LOGROS" />
-            </Button>
-          </ListItem>
+          {menuOptions.map((option) => (
+            <ListItem key={option.id} sx={{ flex: option.flex }}>
+              <Button
+                onClick={(e) => handleLinkClick(e, option.id)}
+                component="a"
+                href={`#${option.id}`}
+                color="inherit"
+                sx={{
+                  "&:hover": {
+                    backgroundColor: "#D79788",
+                  },
+                }}
+              >
+                <ListItemText primary={option.label} />
+              </Button>
+            </ListItem>
+          ))}
         </List>
         <Hidden smUp>
           {deployMenu ? (

@@ -14,7 +14,7 @@ export default function Main() {
     window.location.href = "mailto:carlosandresriveravalle@gmail.com";
   };
   const handleWhatsAppClick = () => {
-    const message = encodeURIComponent("Hola, ¿cómo te puede ayudar?");
+    const message = encodeURIComponent("Hola Andy :D");
     const phoneNumber = "0984579517";
 
     window.location.href = `https://wa.me/${phoneNumber}?text=${message}`;
