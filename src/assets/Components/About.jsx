@@ -20,7 +20,7 @@ export default function About() {
     setExpanded(newExpanded ? panel : false);
   };
   return (
-    <Box id="about" sx={{ marginX: { xs: 3, sm: 8 }, marginY: 3 }}>
+    <Box id="about" sx={{ marginX: { xs: 3, sm: 8 }, marginTop: 3}}>
       <Typography variant="h4" sx={{ textAlign: "center", fontWeight: 500 }}>
         Sobre mí
       </Typography>

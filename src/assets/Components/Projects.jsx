@@ -18,7 +18,7 @@ export default function Projects() {
     setExpanded(newExpanded ? panel : false);
   };
   return (
-    <Box sx={{ marginX: { xs: 3, sm: 8 }, marginY: 3 }}>
+    <Box sx={{ marginX: { xs: 3, sm: 8 }, marginTop: 3}}>
       <Typography variant="h4" sx={{ textAlign: "center", fontWeight: 500 }}>
         Proyectos
       </Typography>
@@ -31,8 +31,8 @@ export default function Projects() {
       <Typography variant="h5" sx={{ fontWeight: 500 }}>Web</Typography>
       <SwiperCarousel />
       {/* DESING */}
-      <Typography variant="h5" sx={{ fontWeight: 500 }}>Diseño</Typography>
-      <SwiperCarousel />
+      {/* <Typography variant="h5" sx={{ fontWeight: 500 }}>Diseño</Typography>
+      <SwiperCarousel /> */}
     </Box>
   );
 }
