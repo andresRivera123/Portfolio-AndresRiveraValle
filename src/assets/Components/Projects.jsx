@@ -1,14 +1,5 @@
-import {
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
-  Box,
-  Grid,
-  Typography,
-} from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React from "react";
-import logoImage from "../images/logo.png";
-import unityImage from "../images/unityImage.jpg";
 import SwiperCarousel from "./SwiperCarousel";
 
 export default function Projects() {
@@ -18,7 +9,7 @@ export default function Projects() {
     setExpanded(newExpanded ? panel : false);
   };
   return (
-    <Box sx={{ marginX: { xs: 3, sm: 8 }, marginTop: 3}}>
+    <Box sx={{ marginX: { xs: 3, sm: 8 }, marginTop: 3 }}>
       <Typography variant="h4" sx={{ textAlign: "center", fontWeight: 500 }}>
         Proyectos
       </Typography>
@@ -28,11 +19,15 @@ export default function Projects() {
       </Typography>
       <SwiperCarousel />
       {/* WEB */}
-      <Typography variant="h5" sx={{ fontWeight: 500 }}>Web</Typography>
+      <Typography variant="h5" sx={{ fontWeight: 500 }}>
+        Web
+      </Typography>
       <SwiperCarousel />
       {/* DESING */}
-      {/* <Typography variant="h5" sx={{ fontWeight: 500 }}>Diseño</Typography>
-      <SwiperCarousel /> */}
+      <Typography variant="h5" sx={{ fontWeight: 500 }}>
+        Diseño
+      </Typography>
+      <SwiperCarousel />
     </Box>
   );
 }

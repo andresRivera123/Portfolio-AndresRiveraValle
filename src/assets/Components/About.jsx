@@ -32,13 +32,13 @@ export default function About() {
           textAlign: "center",
         }}
       >
-        <Typography sx={{ fontSize: { xs: 15, sm: 20 } }}>
+        <Typography sx={{ fontSize: { xs: 15, sm: 17, md: 20 } }}>
           "Soy un apasionado del diseño centrado en el usuario y el desarrollo
           de experiencias digitales intuitivas y atractivas. Mi enfoque
-          principal está en el campo de{" "}
+          principal está en el campo de
           <span style={{ fontWeight: 800 }}>UX/UI</span>, donde combino mi
           experiencia en <span style={{ fontWeight: 800 }}>frontend</span> con
-          mis habilidades en el{" "}
+          mis habilidades en el
           <span style={{ fontWeight: 800 }}>desarrollo de videojuegos</span>.”
         </Typography>
       </Box>
@@ -48,7 +48,7 @@ export default function About() {
       <Box display="flex">
         <Box
           sx={{
-            width: { xs: 400, sm: 700 },
+            width: { xs: 400, sm: 600},
             margin: "0 auto",
             paddingY: { xs: 1, sm: 2, md: 3 },
           }}

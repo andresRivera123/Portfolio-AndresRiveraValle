@@ -32,7 +32,7 @@ export default function IconsGrid() {
       </Grid>
       <Grid item xs={3} sm={3}>
         <Link
-          href="https://github.com/andresRivera123"
+          href="https://www.linkedin.com/in/carlos-andres-rivera-valle-295651182/"
           target="_blank"
           rel="noopener noreferrer"
         >
