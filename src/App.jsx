@@ -34,7 +34,7 @@ function App() {
       <Box
         id="achievements"
         component="section"
-        sx={{ paddingTop: "75px", minHeight: "100vh" }}
+        sx={{ paddingTop: "75px", minHeight: "75vh" }}
       >
         <Achievements />
       </Box>
