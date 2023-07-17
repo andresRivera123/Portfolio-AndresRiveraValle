@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import { UnityData } from "../utils/ProjectData";
@@ -7,6 +7,7 @@ import { UnityData } from "../utils/ProjectData";
 import "swiper/css";
 import "swiper/css/pagination";
 import "../Styles/bulletSwiper.css";
+import { Image } from "@mui/icons-material";
 
 const SwiperCarousel = () => {
   return (
@@ -40,21 +41,17 @@ const SwiperCarousel = () => {
       >
         {UnityData.map((project) => (
           <SwiperSlide key={project.id}>
-            <Box sx={{ display: "flex", justifyContent: "center" }}>
-              <Box sx={{ width: 350 }}>
-                <img
-                  src={project.image}
-                  alt="Logo portafolio - Andres Rivera"
-                  style={{ width: "100%", height: "auto" }}
-                />
+            <Card sx={{ maxWidth: 345 }}>
+              <CardMedia sx={{ height: 115 }} image={project.image} />
+              <CardContent>
                 <Box display="flex" flexDirection="column">
                   <Typography variant="h7" sx={{ fontWeight: 500 }}>
                     {project.name}
                   </Typography>
                   <Typography variant="h8">{project.description}</Typography>
                 </Box>
-              </Box>
-            </Box>
+              </CardContent>
+            </Card>
           </SwiperSlide>
         ))}
       </Swiper>
