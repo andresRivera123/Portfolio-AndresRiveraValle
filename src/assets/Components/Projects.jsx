@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import SwiperCarousel from "./SwiperCarousel";
+import SwiperCoverflowCarousel from "./SwiperCoverflowCarousel";
 
 export default function Projects() {
   const [expanded, setExpanded] = React.useState("unity");
@@ -27,7 +28,8 @@ export default function Projects() {
       <Typography variant="h5" sx={{ fontWeight: 500 }}>
         Diseño
       </Typography>
-      <SwiperCarousel />
+      <SwiperCoverflowCarousel/>
+
     </Box>
   );
 }

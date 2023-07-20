@@ -7,7 +7,7 @@ import { UnityData } from "../utils/ProjectData";
 import "swiper/css";
 import "swiper/css/pagination";
 import "../Styles/bulletSwiper.css";
-import { Image } from "@mui/icons-material";
+import "../Styles/designSwiper.css";
 
 const SwiperCarousel = () => {
   return (
