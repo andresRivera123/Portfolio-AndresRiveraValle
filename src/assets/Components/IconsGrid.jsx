@@ -24,7 +24,7 @@ export default function IconsGrid() {
           rel="noopener noreferrer"
         >
           <IconButton
-            sx={{ color: "black", "&:hover": { transform: "scale(1.2)" } }}
+            sx={{ color: "#563f3a", "&:hover": { transform: "scale(1.2)" } }}
           >
             <GitHubIcon fontSize="large" />
           </IconButton>
@@ -38,7 +38,7 @@ export default function IconsGrid() {
         >
           <IconButton
             sx={{
-              color: "black",
+              color: "#563f3a",
               "&:hover": { transform: "scale(1.2)" },
             }}
           >
@@ -49,7 +49,7 @@ export default function IconsGrid() {
       <Grid item xs={3} sm={3}>
         <IconButton
           onClick={handleWhatsAppClick}
-          sx={{ color: "black", "&:hover": { transform: "scale(1.2)" } }}
+          sx={{ color: "#563f3a", "&:hover": { transform: "scale(1.2)" } }}
         >
           <WhatsAppIcon fontSize="large" />
         </IconButton>
@@ -57,7 +57,7 @@ export default function IconsGrid() {
       <Grid item xs={3} sm={3}>
         <IconButton
           onClick={handleEmailClick}
-          sx={{ color: "black", "&:hover": { transform: "scale(1.2)" } }}
+          sx={{ color: "#563f3a", "&:hover": { transform: "scale(1.2)" } }}
         >
           <MailOutlineIcon fontSize="large" />
         </IconButton>

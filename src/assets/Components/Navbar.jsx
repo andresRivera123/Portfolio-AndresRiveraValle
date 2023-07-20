@@ -87,7 +87,8 @@ function Navbar() {
                 color="inherit"
                 sx={{
                   "&:hover": {
-                    backgroundColor: "#D79788",
+                    backgroundColor: "#b87f71",
+                    color:"white"
                   },
                 }}
               >

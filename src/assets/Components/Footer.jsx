@@ -14,12 +14,12 @@ export default function Footer() {
         justifyContent: "space-between",
       }}
     >
-      <Box sx={{ display:{xs: "none", sm: "flex"}, flexGrow: 1 }}>
+      <Box sx={{ display: { xs: "none", sm: "flex" }, flexGrow: 1 }}>
         <IconsGrid />
       </Box>
       <Box sx={{ flexGrow: 1, margin: "auto 0" }}>
         <Box>
-          <Typography>Página realizada con REACT</Typography>
+          <Typography>|Buscando la creatividad absoluta|</Typography>
           <Typography>Derechos reservados @AndresRiveraValle | 2023</Typography>
         </Box>
       </Box>
