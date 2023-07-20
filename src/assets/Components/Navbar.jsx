@@ -87,8 +87,8 @@ function Navbar() {
                 color="inherit"
                 sx={{
                   "&:hover": {
-                    backgroundColor: "#b87f71",
-                    color:"white"
+                    backgroundColor: "#563f3a",
+                    color: "white",
                   },
                 }}
               >
@@ -103,15 +103,14 @@ function Navbar() {
               <MenuOpenIcon
                 fontSize="large"
                 color="secondary"
-                sx={{ display: { xs: "block", sm: "none" } }}
+                sx={{ color: "#563f3a", display: { xs: "block", sm: "none" } }}
               />
             </Button>
           ) : (
             <Button onClick={handleClickDeploy}>
               <MenuIcon
                 fontSize="large"
-                color="secondary"
-                sx={{ display: { xs: "block", sm: "none" } }}
+                sx={{ color: "#563f3a", display: { xs: "block", sm: "none" } }}
               />
             </Button>
           )}
